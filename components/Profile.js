@@ -15,14 +15,6 @@ const Profile = () => {
                         {LoggedInUser}
                     </span>
                 </div>
-                <div className="w-1/5 flex flex-col items-center bg-gray rounded-xl shadow-2xl p-4 m-4">
-                <div className="w-full flex justify-center items-center">
-                        <img src="https://media.licdn.com/dms/image/D5603AQFS--nT3JDXkg/profile-displayphoto-shrink_400_400/0/1697855214402?e=1720051200&v=beta&t=3DYjVv1i4ZpJIQMblJWokVqSEqSt1G2ybeh2YnQKkXo"></img>
-                    </div> 
-                    <span className="font-extrabold text-gray-600">
-                        Samiksha
-                    </span>
-                </div>
             </div>
             <div>
                 <span class="font-extrabold text-gray-600 m-4 p-4">Change Your Profile Name</span>
