@@ -6,6 +6,7 @@ import useOnlineStatus from "./utils/useOnlineStatus";
 import { RES_LIST_URL } from "./utils/constants";
 import React from "react";
 const Body = () => {
+    const CORS_PROXY_URL = 'https://thingproxy.freeboard.io/fetch/';
     let [restaurantList, setRestaurantList] = useState(null);
     const [loginbtn, setloginbtn] = useState("Login");
     const [searchText, setSearchText] = useState("");
@@ -15,10 +16,12 @@ const Body = () => {
     },[]);
 
     const fetchData = async () => {
-        const data = await fetch(RES_LIST_URL);
+        const data = await fetch( CORS_PROXY_URL+ RES_LIST_URL);
+        // console.log(data)
         const json = await data.json();
-        setRestaurantList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setfilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json)
+        setRestaurantList(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setfilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     const PromotedRestaurant = ResCardWithPromotedLabel(RestaurantCard);
 
