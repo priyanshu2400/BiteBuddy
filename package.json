@@ -2,7 +2,6 @@
   "name": "react",
   "version": "1.0.0",
   "description": "this is React series",
-  "main": "index.html",
   "scripts": {
     "test": "jest",
     "watch-test" : "jest --watchAll",
